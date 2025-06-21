@@ -6,7 +6,7 @@ const Notification = ({ message }: Props) => {
 
     return (
         <p>
-            {message}
+            No feedback yet
         </p>
     )
 }
