@@ -13,7 +13,7 @@ const VoteOptions = ({ onVote, onReset, canReset }: VoteOptionsProps) => {
             <button onClick={() => onVote('good')}>Good</button>
             <button onClick={() => onVote('neutral')}>Neutral</button>
             <button onClick={() => onVote('bad')}>Bad</button>
-            {canReset && <button onClick={() => onReset()} >Reset</button>}
+            {canReset && <button onClick={onReset} >Reset</button>}
 
         </>
 
