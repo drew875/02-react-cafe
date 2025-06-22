@@ -39,8 +39,11 @@ const App = () => {
 
       <CafeInfo />
       <VoteOptions onVote={handleVote} onReset={resetVotes} canReset={canReset} />
-      <VoteStats votes={votes} totalVotes={totalVotes} positiveRate={positiveRate} />
-      {totalVotes === 0 && <Notification message="No feedback yet" />}
+      {totalVotes > 0 ? (
+        <VoteStats votes={votes} totalVotes={totalVotes} positiveRate={positiveRate} />
+      ) : (
+        <Notification message="No feedback yet" />
+      )}
     </div>
   )
 }
